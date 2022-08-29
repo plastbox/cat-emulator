@@ -1,0 +1,14 @@
+{
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "ZjQwMTBlMDAwZTAwMDMwMGVlMGUwMGUwZWUwMDAwZGNjZDAwZGNjZDAwMDBiY2RkZmZkZGNiMDAwMDNjZGJiZGJkYzMwMDAwYmZkM2RkM2RmYjAwMDBkZWRkZGRkZGVkMDAwMGRlZGZkZGZkZWRiMGJmZGZmZGRkZGZmZGYwZmRiZmRkYmJkZGYyZjBmZGYwMjIyMjIyYmJmZmZkZjBkYmRkZGRiZGRiZmJmMGRkZGRiZGRkZmYwZmYwZmRmZmZkZGYwZjAwZjAwZmYwMGZmMDBmMDAwMDAwMDAwMDAwMDAwMGVlMGUwMGUwZWUwMDAwZGNjZDAwZGNjZDAwMDBiY2RkZmZkZGNiMDAwMDNjZGJiZGJkYzMwMDAwYmZkM2RkM2RmYjAwMDBkZWRkZGRkZGVkMDAwMGRlZGZkZGZkZWRmYjBiZGZmZGRkZGZmZGRmMGZiZmRkYmJkZGIyZGYwZmYwMjIyMjIyYmRiZDBmZjBkZGRkZGRmZGZmMDBmMGJkZmRmZmZkMDAwMDAwZmZmZjAwZmYwMDAwMDAwMDAwMDAwMDAwMDBlZTBlMDBlMGVlMDAwMGRjY2QwMGRjY2QwMDAwYmNkZGZmZGRjYjAwMDAzY2RiYmRiZGMzMDAwMGJmZDNkZDNkZmIwMDAwZGVkZGRkZGRlZDAwMDBkZWRmZGRmZGVkYjBiZmRmZmRkZGRmZmRmMGZkYmZkZGJiZGRiMmZmZmRmMDIyMjIyMmJkZGJmYmYwZGRkZGRkZmRmZjBmMDBkZmRiZGYwZjAwMDAwMGYwZmZmZjBmMDAwMA==",
+        "displayName": "catt"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
