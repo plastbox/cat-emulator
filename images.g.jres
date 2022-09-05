@@ -1,4 +1,9 @@
 {
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAvwsAAAAAALC7OwAAAAAAsLsLAAAAAACwuzsAAAAAALC7CwAAAAAAsLsLAAAAAACwuwsAAAAAALC7CwAAAAAAsLs7AAAAAACwuwsAAAAAALC7OwAAAAAAAL8LAAAAAAAAMAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "rat"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

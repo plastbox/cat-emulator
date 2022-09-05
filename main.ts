@@ -14,10 +14,13 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+function flipG (targetSprite: Sprite) {
+    targetSprite.ay = targetSprite.ay * -1
+}
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleBlueCrystal, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`transparency16`)
-    sprite.ay = -500
     scaling.scaleByPercent(sprite, 50, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+    flipG(sprite)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -74,7 +77,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.down.onEvent(ControllerButtonEvent.Repeated, function () {
     scaling.scaleToPercent(cat, Math.max(cat.scale - 5, 100), ScaleDirection.Uniformly, ScaleAnchor.Bottom)
-    cat.ay = 500
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    flipG(cat)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles14, function (sprite, location) {
     scene.setBackgroundImage(img`
@@ -470,4 +475,24 @@ controller.moveSprite(cat, 100, 0)
 cat.setVelocity(0, 50)
 scene.cameraFollowSprite(cat)
 cat.ay = 500
-cat.startEffect(effects.fire)
+cat.startEffect(effects.confetti)
+let ratti = sprites.create(assets.image`rat`, SpriteKind.Enemy)
+ratti.follow(cat, 50)
+ratti.ay = 500
+let ratti1 = sprites.create(assets.image`rat`, SpriteKind.Enemy)
+ratti1.x += 100
+ratti1.follow(cat, 50)
+ratti1.ay = 500
+let ratti2 = sprites.create(assets.image`rat`, SpriteKind.Enemy)
+ratti2.x += 200
+ratti2.follow(cat, 50)
+ratti2.ay = 500
+game.onUpdateInterval(100, function () {
+    for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
+        if (value.x > cat.x && value.x < cat.x + cat.width) {
+            if (value.isHittingTile(CollisionDirection.Top) || value.isHittingTile(CollisionDirection.Bottom)) {
+                flipG(value)
+            }
+        }
+    }
+})
